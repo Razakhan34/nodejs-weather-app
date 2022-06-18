@@ -36,10 +36,21 @@ header a {
   margin-right: 16px;
   font-size: 1.2rem;
 }
-
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
 .about-img {
-  width: 250px;
-  height: 300px;
+  flex-basis: 40%;
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
+}
+.image-container p {
+  flex-basis: 60%;
 }
 .weather-form {
   margin: 8px 0px;
@@ -85,5 +96,13 @@ header a {
   }
   header a {
     margin-right: 8px;
+  }
+  .image-container {
+    flex-direction: column;
+  }
+  .image-container .about-img {
+    flex-basis: 0;
+    width: 150px;
+    height: 150px;
   }
 }
