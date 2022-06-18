@@ -7,7 +7,7 @@ const forecast = (latitude, longitude, callback) => {
       if (response.body.error)
         throw new Error("Unable to find location , try another search");
       const data = response.body.current;
-      const forecastData = `It is ${data.weather_descriptions[0]} today . It is currently ${data.temperature} degree out . it feels like ${data.feelslike} degree out.There is a ${data.precip}% chance of rain`;
+      const forecastData = `It is ${data.weather_descriptions[0]} today . It is currently ${data.temperature} degree out . it feels like ${data.feelslike} degree out.There is a ${data.precip}% chance of rain and humidity level is ${data.humidity}%. The wind speed is ${data.wind_speed}km/hr.`;
       callback(undefined, forecastData);
     } catch (err) {
       callback(err.message, undefined);
